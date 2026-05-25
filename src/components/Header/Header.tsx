@@ -3,14 +3,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faScissors } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function Header() {
 
     const [burgerActive, setBurgerActive] = useState<boolean>(false)
 
+    const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+    useEffect(() => {
+        function handleScroll() {
+            setIsScrolled(window.scrollY > 0)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        
+        return () => {
+            window.addEventListener("scroll", handleScroll)
+        }
+    }, [])
+
     return (
-        <header className="bg-transparent flex justify-between items-center py-2 px-10 w-full fixed top-0 left-0 z-2">
+        <header className={`${isScrolled ? "bg-black/70 backdrop-blur-md shadow-md" : "bg-transparent"}
+        flex justify-between items-center py-2 px-[5vw] w-full fixed top-0 left-0 z-2 transition-all duration-300`}>
             <h1 className="text-white flex flex-row gap-1 items-center"><FontAwesomeIcon className="w-6 h-6 text-secondary border border-secontext-secondary p-1" icon={faScissors}/>NOBRE</h1>
             
             <nav className="text-low flex flex-row gap-5 text-sm max-lg:hidden">
@@ -30,7 +45,7 @@ export function Header() {
                                 >{burgerActive ? "X" : <FontAwesomeIcon icon={faBars}/>}</button>
 
             {burgerActive && (
-                <nav className="bg-lowbg text-low flex flex-col gap-4 absolute w-full top-15 left-0 p-10
+                <nav className="bg-lowbg text-low flex flex-col gap-4 absolute w-full top-12 left-0 p-10
                 lg:hidden">
                     <a onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">SERVIÇO</a>
                     <a onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">SOBRE</a>

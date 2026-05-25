@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
+
 @theme {
     --color-primary: #000;
     --color-secondary: #C9A84C;
-    --color-low: #393733;
+    --color-low: #625E5A;
     --color-lowbg: #0C0C0C;
-}
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+    --font-bodoni: "Bodoni Moda", Georgia, serif
 }
 
 section {
