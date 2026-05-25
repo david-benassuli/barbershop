@@ -2,7 +2,9 @@
 
 @theme {
     --color-primary: #000;
-    --color-secondary: #C9A84C
+    --color-secondary: #C9A84C;
+    --color-low: #393733;
+    --color-lowbg: #0C0C0C;
 }
 
 * {
@@ -10,5 +12,5 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
