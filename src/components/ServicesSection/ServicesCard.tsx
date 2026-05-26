@@ -12,7 +12,7 @@ type ServicesCardType = {
 
 export function ServicesCard(props: ServicesCardType) {
     return (
-        <div className="bg-mediumbg flex flex-col gap-5 p-10 hover:bg-highbg transition-all duration-300
+        <div className="border border-secondary/20 flex flex-col gap-5 p-10 hover:bg-highbg transition-all duration-300
             max-sm:p-5
         ">
             <header className="flex flex-row justify-between items-center">
