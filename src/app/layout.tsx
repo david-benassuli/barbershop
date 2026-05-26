@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Bodoni_Moda, DM_Sans } from "next/font/google"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-});
+  variable: "--font-bodoni",
+})
+
+export const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dmsans",
+})
 
 export const metadata: Metadata = {
   title: "Barbershop",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bodoni.variable} ${dmSans.variable}`}
     >
       <link rel="shortcut icon" href="/barbershop.ico" type="image/x-icon" />
       <body className="min-h-full flex flex-col">{children}</body>
