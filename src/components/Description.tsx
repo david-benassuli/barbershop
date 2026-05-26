@@ -1,6 +1,6 @@
-export function Description(props: {value: string}) {
+export function Description(props: {value: string, widthBox?: number}) {
     return (
-        <div className="w-[320px]">
+        <div className={`w-[${props.widthBox}px]`}>
             <p className="text-low text-[14px] font-dmsans">{props.value}</p>
         </div>
     )

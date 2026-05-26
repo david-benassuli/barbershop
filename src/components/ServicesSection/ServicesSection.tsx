@@ -11,15 +11,15 @@ import { faDroplet } from "@fortawesome/free-solid-svg-icons"
 
 export function ServicesSection() {
     return (
-        <section className="bg-lowbg flex flex-col gap-10">
+        <section className="bg-mediumbg flex flex-col gap-10" id="services-section">
             <Title value="SERVIÇOS" />
             
-            <div className="flex flex-row flex-wrap justify-between items-center">
+            <div className="flex flex-row flex-wrap justify-between items-center gap-5">
                 <Subtitle value="O que oferecemos" />
-                <Description value="Cada serviço foi pensado para oferecer o melhor resultado com máximo conforto e exclusividade." />
+                <Description value="Cada serviço foi pensado para oferecer o melhor resultado com máximo conforto e exclusividade." widthBox={320}/>
             </div>
 
-            <div className="grid grid-cols-3
+            <div className="grid grid-cols-3 bg-secondary/20 p-px gap-px
                             max-lg:grid-cols-2
                             max-sm:grid-cols-1
             ">

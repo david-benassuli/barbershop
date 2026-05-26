@@ -3,13 +3,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 import { TitleInfo } from "./TitleInfo"
 
-import { Description } from "../Description"
-
 export function TitleSection() {
     return (
-        <section className="relative bg-[url('/background.png')] bg-cover bg-center px-[5vw] py-10
-                            
-            " >
+        <section className="relative bg-[url('/background.png')] bg-cover bg-center px-[5vw] py-10" id="title-section">
             <div className="absolute inset-0 bg-black/60 z-0"></div>
             <div className="relative flex flex-col gap-5 h-full z-1">
                 <h1 style={{fontFamily: "Bodoni Moda"}} className="text-white text-[clamp(3.5em,8vw,10em)] leading-none font-[--font-bodoni]">Arte em <br /> <span className="text-secondary">cada</span> <br /> corte</h1>

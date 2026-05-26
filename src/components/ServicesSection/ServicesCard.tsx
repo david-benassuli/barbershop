@@ -12,11 +12,11 @@ type ServicesCardType = {
 
 export function ServicesCard(props: ServicesCardType) {
     return (
-        <div className="flex flex-col gap-5 p-10 border border-secondary hover:bg-highbg transition-all duration-300
+        <div className="bg-mediumbg flex flex-col gap-5 p-10 hover:bg-highbg transition-all duration-300
             max-sm:p-5
         ">
             <header className="flex flex-row justify-between items-center">
-                <FontAwesomeIcon className="p-3 border border-secondary text-secondary" icon={props.icon}/>
+                <FontAwesomeIcon className="p-3 border border-secondary/20 text-secondary" icon={props.icon}/>
                 <h2 className="text-[1.25em] font-[--font-bodoni] text-secondary">R$ {props.price}</h2>
             </header>
             <h3 className="text-2xl text-white font-[--font-bodoni]">{props.type}</h3>
