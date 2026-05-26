@@ -21,8 +21,8 @@ export function BarbersSection() {
                 </div>
             </Reveal>
 
-            <div className="grid grid-cols-3 gap-5
-                            max-md:flex max-md:flex-col
+            <div className="grid grid-cols-3 gap-2
+                            max-md:flex max-md:flex-col max-md:gap-8
             ">
                 <Reveal duration={1}>
                     <BarberCard url_img="/barber1.png" name="Rafael Nobre" cut="Cortes Clássicos & Fade" exp={12} insta="rafaelnobre"/>

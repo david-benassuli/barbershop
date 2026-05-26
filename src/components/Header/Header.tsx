@@ -34,7 +34,7 @@ export function Header() {
                 <Link className="hover:text-secondary transition-all duration-500" href="#services-section">SERVIÇOS</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#about-section">SOBRE</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
-                <Link className="hover:text-secondary transition-all duration-500" href="#">GALERIA</Link>
+                <Link className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#">AGENDAMENTO</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#">CONTATO</Link>
             </nav>
@@ -52,7 +52,7 @@ export function Header() {
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#services-section">SERVIÇOS</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#about-section">SOBRE</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
-                    <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">GALERIA</Link>
+                    <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">AGENDAMENTO</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">CONTATO</Link>
 
