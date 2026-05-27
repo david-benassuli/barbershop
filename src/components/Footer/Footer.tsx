@@ -16,7 +16,7 @@ import { Reveal } from "../Reveal"
 
 export function Footer() {
     return (
-        <footer className="bg-lowbg flex flex-col gap-8 px-[5vw] py-10">
+        <footer id="contact-footer" className="bg-lowbg flex flex-col gap-8 px-[5vw] py-10">
             <div className="grid grid-cols-4 gap-10 justify-between max-md:grid-cols-2 max-sm:grid-cols-1">
 
                 <Reveal duration={0.5}>

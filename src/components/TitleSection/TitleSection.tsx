@@ -5,6 +5,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 import { TitleInfo } from "./TitleInfo"
 
+import Link from "next/link"
+
 import { Reveal } from "../Reveal"
 
 export function TitleSection() {
@@ -26,8 +28,8 @@ export function TitleSection() {
                         <div className="flex flex-row flex-wrap gap-5 text-sm
                                         max-sm:justify-center font-dmsans
                         ">
-                            <button className="group bg-secondary/80 hover:bg-secondary hover:cursor-pointer duration-200 px-8 py-4 flex flex-row gap-2 items-center" type="button">AGENDAR HORÁRIO <FontAwesomeIcon className="group-hover:translate-x-2 duration-200 w-4 h-4" icon={faArrowRight} /></button>
-                            <button className="bg-transparent text-[#d1d1d1] font-bold border border-secondary/30 hover:border-secondary hover:cursor-pointer duration-200 px-8 py-4" type="button">NOSSOS SERVIÇOS</button>
+                            <Link className="group bg-secondary/80 hover:bg-secondary hover:cursor-pointer duration-200 px-8 py-4 flex flex-row gap-2 items-center" href="#contact-footer">CONTATOS <FontAwesomeIcon className="group-hover:translate-x-2 duration-200 w-4 h-4" icon={faArrowRight} /></Link>
+                            <Link className="bg-transparent text-[#d1d1d1] font-bold border border-secondary/30 hover:border-secondary hover:cursor-pointer duration-200 px-8 py-4" href="#services-section">NOSSOS SERVIÇOS</Link>
                         </div>
                     </Reveal>
                 </div>

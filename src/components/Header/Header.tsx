@@ -35,11 +35,8 @@ export function Header() {
                 <Link className="hover:text-secondary transition-all duration-500" href="#about-section">SOBRE</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
-                <Link className="hover:text-secondary transition-all duration-500" href="#">AGENDAMENTO</Link>
-                <Link className="hover:text-secondary transition-all duration-500" href="#">CONTATO</Link>
+                <Link className="hover:text-secondary transition-all duration-500" href="#contact-footer">CONTATO</Link>
             </nav>
-
-            <button className="bg-secondary/80 duration-200 hover:cursor-pointer px-5 py-2.5 text-sm hover:bg-secondary max-lg:hidden" type="button">AGENDAR</button>
 
             <button className="text-white text-2xl hidden hover:cursor-pointer hover:scale-110 duration-100
                                 max-lg:block"
@@ -53,11 +50,7 @@ export function Header() {
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#about-section">SOBRE</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
                     <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
-                    <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">AGENDAMENTO</Link>
-                    <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#">CONTATO</Link>
-
-                    <button className="bg-secondary/80 duration-200 hover:cursor-pointer px-5 py-2.5 text-sm hover:bg-secondary text-mediumbg" type="button">AGENDAR HORÁRIO</button>
-                    
+                    <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#contact-footer">CONTATO</Link>                    
                 </nav>
             )}
         </header>
