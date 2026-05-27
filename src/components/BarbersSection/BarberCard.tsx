@@ -19,7 +19,7 @@ export function BarberCard(props: BarberCardProps) {
             </div>
 
             <div className="flex flex-col gap-1 max-md:gap-0">
-                <h2 className="text-white font-bodoni text-2xl">{props.name}</h2>
+                <h2 className="text-main font-bodoni text-2xl">{props.name}</h2>
                 <h3 className="text-secondary font-dmsans text-sm">{props.cut}</h3>
                 <p className="text-low font-dmsans text-sm">{props.exp} ANOS DE EXPERIÊNCIA</p>
             </div>

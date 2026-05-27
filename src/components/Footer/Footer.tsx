@@ -21,7 +21,7 @@ export function Footer() {
 
                 <Reveal duration={0.5}>
                     <div className="flex flex-col gap-5">
-                        <h1 className="text-white font-bodoni tracking-wide flex flex-row gap-2 items-center"><FontAwesomeIcon className="text-secondary border border-secontext-secondary p-1.5" icon={faScissors}/>NOBRE</h1>
+                        <h2 className="text-main font-bodoni tracking-wide flex flex-row gap-2 items-center"><FontAwesomeIcon className="text-secondary border border-secontext-secondary p-1.5" icon={faScissors}/>NOBRE</h2>
                         <p className="text-sm text-low">A barbearia premium que transforma sua aparência e eleva sua confiança ao próximo nível.</p>
                         <div className="flex flex-row gap-2">
                             <Link href="https://www.instagram.com/david_benassuli/" ><FontAwesomeIcon className="p-2 border border-secondary/20 text-sm text-low" icon={faInstagram}/></Link>
@@ -48,11 +48,11 @@ export function Footer() {
                         <Title value="HORÁRIO" />
                         <div>
                             <Description value="Segunda - Sexta" />
-                            <p className="text-white text-xl font-dmsans">09:00 - 19:00</p>
+                            <p className="text-main text-xl font-dmsans">09:00 - 19:00</p>
                         </div>
                         <div>
                             <Description value="Sábado" />
-                            <p className="text-white text-xl font-dmsans">09:00 - 17:00</p>
+                            <p className="text-main text-xl font-dmsans">09:00 - 17:00</p>
                         </div>
                         <Description value="Domingo - Fechado" />
                     </div>
@@ -73,7 +73,7 @@ export function Footer() {
 
             <div className="text-center flex flex-row justify-between gap-5 max-sm:flex-col max-sm:gap-2 max-sm:items-center">
                 <p className="text-sm text-low">&copy; 2026 Nobre Barbearia. Todos os direitos reservados.</p>
-                <p className="text-sm text-low">Desenvolvido com excelência por <Link className="text-white hover:underline" href="https://www.linkedin.com/in/felipe-david-88a521396/" target="_blank">Felipe David</Link></p>
+                <p className="text-sm text-low">Desenvolvido com excelência por <Link className="text-main hover:underline" href="https://www.linkedin.com/in/felipe-david-88a521396/" target="_blank">Felipe David</Link></p>
             </div>
             
         </footer>

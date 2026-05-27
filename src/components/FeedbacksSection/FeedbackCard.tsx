@@ -17,7 +17,7 @@ export function FeedBackCard(props: FeedBackCardProps) {
             <div className="flex flex-row gap-2 items-center">
                 <FontAwesomeIcon className="text-low border border-secondary/20 p-2" icon={faUser} />
                 <div>
-                    <h2 className="text-white font-dmsans text-sm">{props.name}</h2>
+                    <h2 className="text-main font-dmsans text-sm">{props.name}</h2>
                     <h3 className="text-low uppercase font-dmsans text-sm">{props.profession}</h3>
                 </div>
             </div>

@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #000;
+    --color-main: #F0EBE0;
     --color-secondary: #C9A84C;
     --color-low: #625E5A;
     --color-lowbg: #050505;
@@ -11,8 +9,35 @@
     --color-highbg: #111111;
 
     --font-bodoni: "Bodoni Moda", Georgia, serif;
-    --font-dmsans: "DM Sans" sans-serif;
+    --font-dmsans: "DM Sans", sans-serif;
 }
+
+:root {
+    background-color: var(--color-highbg);
+    color: var(--color-main);
+}
+
+body {
+    background-color: var(--color-highbg);
+    color: var(--color-main);
+}
+
+html {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+body.light-mode {
+    --color-main: #1C1814;
+    --color-secondary: #B8922A;
+    --color-low: #7A6F60;
+    --color-lowbg: #E4DDD0;
+    --color-mediumbg: #F7F2EA;
+    --color-highbg: #EDE8DC;
+}
+
 
 section {
     min-height: 100vh;

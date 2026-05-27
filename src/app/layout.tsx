@@ -28,8 +28,7 @@ export default function RootLayout({
       lang="en"
       className={`${bodoni.variable} ${dmSans.variable} scroll-smooth`}
     >
-      <link rel="shortcut icon" href="/barbershop.ico" type="image/x-icon" />
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col transition-colors duration-100">{children}</body>
     </html>
   );
 }
