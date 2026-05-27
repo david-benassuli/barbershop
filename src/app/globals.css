@@ -12,23 +12,6 @@
     --font-dmsans: "DM Sans", sans-serif;
 }
 
-:root {
-    background-color: var(--color-highbg);
-    color: var(--color-main);
-}
-
-body {
-    background-color: var(--color-highbg);
-    color: var(--color-main);
-}
-
-html {
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-}
-
-
 body.light-mode {
     --color-main: #1C1814;
     --color-secondary: #B8922A;
@@ -37,7 +20,6 @@ body.light-mode {
     --color-mediumbg: #F7F2EA;
     --color-highbg: #EDE8DC;
 }
-
 
 section {
     min-height: 100vh;
