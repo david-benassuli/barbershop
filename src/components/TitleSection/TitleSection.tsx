@@ -12,7 +12,7 @@ export function TitleSection() {
         <section className="relative bg-[url('/background.jpg')] bg-cover bg-center px-[5vw] py-10" id="title-section">
             <div className="absolute inset-0 bg-black/80 z-0"></div>
             
-            <Reveal duration={0.6}>
+            <Reveal duration={0.5}>
                 <div className="relative flex flex-col gap-5 h-full z-1">
                     <h1 style={{fontFamily: "Bodoni Moda"}} className="text-white text-[clamp(3.5em,8vw,10em)] leading-none font-[--font-bodoni]">Arte em <br /> <span className="text-secondary">cada</span> <br /> corte</h1>
                     <p className="text-lg text-low max-w-125">Experiência premium de barbearia. Onde o estilo encontra a tradição e cada detalhe é tratado com maestria.</p>
@@ -22,7 +22,7 @@ export function TitleSection() {
                         <TitleInfo info="9 anos" description="DE EXPERIÊNCIA"/>
                         <TitleInfo info={"4.9 ★"} description="AVALIAÇÃO MÉDIA"/>
                     </div>
-                    <Reveal duration={1}>
+                    <Reveal duration={0.8}>
                         <div className="flex flex-row flex-wrap gap-5 text-sm
                                         max-sm:justify-center font-dmsans
                         ">

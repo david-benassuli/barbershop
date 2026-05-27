@@ -17,7 +17,7 @@ export function ServicesSection() {
     return (
         <section className="bg-mediumbg flex flex-col gap-10" id="services-section">
             <Reveal duration={0.5}>
-                <Title value="SERVIÇOS" />
+                <Title value="SERVIÇOS" feature/>
             </Reveal>
             
             <Reveal duration={0.5}>
@@ -31,22 +31,22 @@ export function ServicesSection() {
                             max-lg:grid-cols-2
                             max-sm:grid-cols-1
             ">
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faScissors} price={65} type="Corte Clássico" description="Corte masculino personalizado com técnica profissional e acabamento impecável." time={45} />
                 </Reveal>
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faStar} price={55} type="Barba Completa" description="Modelagem, hidratação e acabamento refinado para uma barba sempre perfeita." time={35} />
                 </Reveal>
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faPerson} price={65} type="Sobrancelha" description="Design de precisão para sobrancelhas bem definidas e harmoniosas." time={20} />
                 </Reveal>
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faDroplet} price={120} type="Pigmentação" description="Coloração premium de barba e cabelo com produtos de altíssima qualidade." time={60} />
                 </Reveal>
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faStar} price={150} type="Combo Premium" description="Corte + Barba + Hidratação. A experiência completa da Nobre Barbearia." time={90} />
                 </Reveal>
-                <Reveal duration={0.8}>
+                <Reveal duration={0.6}>
                     <ServicesCard icon={faDroplet} price={45} type="Hidratação" description="Tratamento intensivo para cabelos ressecados com ativos botânicos premium." time={30} />
                 </Reveal>
             </div>

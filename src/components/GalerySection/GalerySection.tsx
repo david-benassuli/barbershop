@@ -8,14 +8,14 @@ import { Reveal } from "../Reveal"
 export function GalerySection() {
     return (
         <section className="bg-highbg flex flex-col gap-10" id="galery-section">
-            <Reveal duration={0.8}>
-                <Title value="GALERIA" />
+            <Reveal duration={0.5}>
+                <Title value="GALERIA" feature/>
             </Reveal>
-            <Reveal duration={1.2}>
+            <Reveal duration={0.6}>
                 <Subtitle value="Nossa galeria" />
             </Reveal>
 
-            <Reveal duration={1}>
+            <Reveal duration={0.8}>
                 <div className="grid grid-cols-4 gap-2
                                 max-lg:grid-cols-2
                                 max-md:flex max-md:flex-col

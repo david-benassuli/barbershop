@@ -12,7 +12,7 @@ export function BarbersSection() {
     return (
         <section className="bg-mediumbg flex flex-col gap-10" id="barbers-section">
             <Reveal duration={1}>
-                <Title value="EQUIPE" />
+                <Title value="EQUIPE" feature/>
             </Reveal>
             <Reveal duration={1}>
                 <div className="flex flex-row flex-wrap justify-between items-center gap-5">
