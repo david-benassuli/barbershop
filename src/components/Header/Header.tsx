@@ -3,6 +3,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faScissors } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faX } from "@fortawesome/free-solid-svg-icons"
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
 import { faSun } from "@fortawesome/free-solid-svg-icons"
 
@@ -53,9 +54,9 @@ export function Header() {
             ><FontAwesomeIcon className={`w-5 h-5 text-xl hover:cursor-pointer hover:scale-110 transition-all duration-200  ${lightMode ? "text-low hover:text-low/80" : "text-secondary hover:text-secondary/80"}`} icon={lightMode ? faMoon : faSun} /></button>
 
             <button className="text-main text-2xl hidden hover:cursor-pointer hover:scale-110 duration-100
-                                max-lg:block"
+                                max-lg:flex max-lg:justify-center max-lg:items-center"
                     onClick={() => setBurgerActive(prev => !prev)}
-                                >{burgerActive ? "X" : <FontAwesomeIcon icon={faBars}/>}</button>
+                                ><FontAwesomeIcon icon={burgerActive ? faX : faBars} /></button>
 
             {burgerActive && (
                 <nav className="bg-mediumbg text-low border-b border-t border-secondary/50 shadow flex flex-rpw justify-between items-start gap-4 absolute w-full top-12 left-0 p-10
