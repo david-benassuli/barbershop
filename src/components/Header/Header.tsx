@@ -46,6 +46,7 @@ export function Header() {
                 <Link className="hover:text-secondary transition-all duration-500" href="#about-section">SOBRE</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
+                <Link className="hover:text-secondary transition-all duration-500" href="#scheduling-section">AGENDAMENTO</Link>
                 <Link className="hover:text-secondary transition-all duration-500" href="#contact-footer">CONTATO</Link>
             </nav>
 
@@ -67,6 +68,7 @@ export function Header() {
                         <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#barbers-section">BARBEIROS</Link>
                         <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#galery-section">GALERIA</Link>
                         <Link onClick={() => setBurgerActive(false)} className="hover:text-secondary transition-all duration-500" href="#contact-footer">CONTATO</Link>  
+                        <Link onClick={() => setBurgerActive(false)} className="p-5 bg-secondary text-mediumbg font-bold font-dmsans self-stretch" href="#scheduling-section">AGENDAR HORÁRIO</Link>  
                     </div>             
 
                     <button className=""
