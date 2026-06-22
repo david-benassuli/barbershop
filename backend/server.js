@@ -10,14 +10,14 @@ app.use(express.json())
 app.use(cors())
 
 const MONGO_URL = process.env.MONGO_URL
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 
 mongoose.connect(MONGO_URL)
     .then(() => {
         console.log('MongoDB conectado')
 
         app.listen(PORT, () => {
-            console.log(`Servidor rodando na porta http://localhost:${PORT}`)
+            console.log(`Servidor rodando na porta ${PORT}`)
         })
     })
     .catch((err) => {

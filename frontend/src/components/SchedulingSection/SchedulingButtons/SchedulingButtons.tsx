@@ -1,5 +1,7 @@
 'use client'
 
+import 'dotenv/config'
+
 import { useScheduling } from "@/hook/UseScheduling"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -11,6 +13,8 @@ type SchedulingButtonsType = {
     disableCondition?: boolean,
     lastStep?: boolean,
 }
+
+const API_URL = process.env.API_URL
 
 export function SchedulingButtons(props: SchedulingButtonsType) {
 
@@ -30,7 +34,7 @@ export function SchedulingButtons(props: SchedulingButtonsType) {
 
                     if (props.lastStep) {
                         try {
-                            await fetch('http://localhost:3001/schedulings', {
+                            await fetch(`${API_URL}/schedulings`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

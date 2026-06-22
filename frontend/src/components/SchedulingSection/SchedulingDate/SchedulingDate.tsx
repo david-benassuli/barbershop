@@ -1,3 +1,5 @@
+'use client'
+
 import { useScheduling } from "@/hook/UseScheduling"
 
 import { SchedulingDateCardDay } from "./SchelingDateCardDay"
@@ -11,6 +13,8 @@ import { useEffect } from "react"
 type SchedulingResponseType = [{
   hour: string
 }]
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 export function SchedulingDate(props: SchedulingSectionType) {
 
@@ -28,7 +32,7 @@ export function SchedulingDate(props: SchedulingSectionType) {
     if (!barber || !month || !day) return
 
     async function loadSchedulings() {
-        const url_fetch = `http://localhost:3001/schedulings?barber=${barber}&month=${month}&day=${day}`
+        const url_fetch = `${API_URL}/schedulings?barber=${barber}&month=${month}&day=${day}`
 
         const response = await fetch(url_fetch)
         const data: SchedulingResponseType = await response.json()
