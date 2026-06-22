@@ -21,7 +21,7 @@ export function SchedulingRestart() {
                 <h3 className="text-main text-[clamp(1rem,5vw,3rem)] font-[--font-bodoni] leading-none">Agendamento confirmado!</h3>
             </Reveal>
             <Reveal duration={0.7}>
-                <p className="text-low font-dmsans text-sm">Seu horário foi reservado com sucesso. Uma confirmação será enviada ao seu WhatsApp em instantes.</p>
+                <p className="text-low font-dmsans text-sm text-center">Seu horário foi reservado com sucesso. Uma confirmação será enviada ao seu WhatsApp em instantes.</p>
             </Reveal>
 
             <Reveal duration={0.8}>

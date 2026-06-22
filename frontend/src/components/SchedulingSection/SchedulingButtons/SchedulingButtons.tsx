@@ -17,7 +17,7 @@ export function SchedulingButtons(props: SchedulingButtonsType) {
     const {setScheduling} = useScheduling()
 
     return (
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 flex-wrap">
             {props.buttonBack && <button type="button" className="px-8 py-4 text-low/50 border border-low/50 hover:text-low hover:border-low hover:cursor-pointer transition-colors duration-200"
                 onClick={() => setScheduling(prev => ({...prev, step: props.step - 1}))}
             >VOLTAR</button>}

@@ -38,7 +38,7 @@ export function Header() {
 
     return (
         <header className={`${isScrolled ? "bg-lowbg/70 backdrop-blur-md shadow-md" : "bg-transparent"}
-        flex justify-between items-center font-dmsans py-2 px-[5vw] w-full fixed top-0 left-0 z-2 transition-all duration-300`}>
+        flex flex-row flex-wrap justify-between items-center font-dmsans py-2 px-[5vw] w-full fixed top-0 left-0 z-2 transition-all duration-300`}>
             <h2 className="text-main font-bodoni tracking-wide flex flex-row gap-2 items-center"><FontAwesomeIcon className="text-secondary border border-secontext-secondary p-1.5" icon={faScissors}/>NOBRE</h2>
             
             <nav className="text-low font-bold tracking-widest flex flex-row gap-5 text-sm max-lg:hidden">

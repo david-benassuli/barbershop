@@ -20,42 +20,44 @@ export function SchedulingConfirmation(props: SchedulingSectionType) {
             <h3 className="text-main text-[clamp(1rem,5vw,3rem)] font-[--font-bodoni] leading-none">Confirmar agendamento</h3>
 
             <div className="bg-lowbg flex flex-col gap-5 p-4 border border-low/50 font-dmsans">
-                <div className="flex flex-row justify-between">
-                    <h4 className="text-low">SERVIÇO</h4>
-                    <p className="text-main">{scheduling.service}</p>
+                <div className="flex flex-row justify-between flex-wrap">
+                    <h4 className="text-low basis-2">{scheduling.services.length <= 1 ?'SERVIÇO' : 'SERVIÇOS'}</h4>
+                    <div className="flex flex-row gap-5 flex-wrap">
+                        {scheduling.services.map((item, index) => <p key={`${item}-${index}`} className="text-main">{item}</p>)}
+                    </div>
                 </div>
 
                 <hr className="border-low/30" />
 
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">PREÇO</h4>
-                    <p className="text-main">R${scheduling.price},00</p>
+                    <p className="text-main">R${scheduling.prices.reduce((i, price) => i + price)},00</p>
                 </div>
                 
                 <hr className="border-low/30" />
 
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">DURAÇÃO</h4>
-                    <p className="text-main">{scheduling.duration} min</p>
+                    <p className="text-main">{scheduling.durations.reduce((i, duration) => i + duration)} min</p>
                 </div>
 
                 <hr className="border-low/30" />
 
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">BARBEIRO</h4>
                     <p className="text-main">{scheduling.barber}</p>
                 </div>
 
                 <hr className="border-low/30" />
 
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">DATA</h4>
                     <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {months[scheduling.month]}</p>
                 </div>
 
                 <hr className="border-low/30" />
 
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">HORÁRIO</h4>
                     <p className="text-main">{scheduling.hour}</p>
                 </div>

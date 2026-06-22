@@ -53,9 +53,9 @@ export function SchedulingSection() {
                         <Reveal duration={0.5}>
                             <div className="bg-lowbg flex flex-col gap-2 p-4 border border-low/50">
                                 <h4 className="text-secondary">RESUMO</h4>
-                                {scheduling.service && <div className="flex flex-col">
-                                    <h5 className="text-low text-sm">Serviço</h5>
-                                    <p className="text-main">{scheduling.service} - R${scheduling.price},00</p>
+                                {scheduling.services.length && <div className="flex flex-col">
+                                    <h5 className="text-low text-sm">{scheduling.services.length <= 1 ?'Serviço' : 'Serviços'}</h5>
+                                    {scheduling.services.map((item, index) => <p className="text-main" key={`${item}-${index}`}>{item} - R${scheduling.prices[index]},00</p>)}
                                 </div>}
                                 {scheduling.barber && <div className="flex flex-col">
                                     <h5 className="text-low text-sm">Barbeiro</h5>

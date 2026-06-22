@@ -28,26 +28,26 @@ export function SchedulingTypeService(props: SchedulingSectionType) {
                 md:grid md:grid-cols-2
             ">
                 <Reveal duration={0.5}>
-                    <SchedulingTypeServiceCard icon={faScissors} service="Corte Clássico" duration={45} price={65} active={scheduling.service === 'Corte Clássico'} />
+                    <SchedulingTypeServiceCard icon={faScissors} service="Corte Clássico" duration={45} price={65} active={scheduling.services.includes('Corte Clássico')} />
                 </Reveal>
                 <Reveal duration={0.6}>
-                    <SchedulingTypeServiceCard icon={faStar} service="Barba Completa" duration={35} price={55} active={scheduling.service === 'Barba Completa'} />
+                    <SchedulingTypeServiceCard icon={faStar} service="Barba Completa" duration={35} price={55} active={scheduling.services.includes('Barba Completa')} />
                 </Reveal>
                 <Reveal duration={0.7}>
-                    <SchedulingTypeServiceCard icon={faPerson} service="Sombrancelha" duration={20} price={25} active={scheduling.service === 'Sombrancelha'} />
+                    <SchedulingTypeServiceCard icon={faPerson} service="Sombrancelha" duration={20} price={25} active={scheduling.services.includes('Sombrancelha')} />
                 </Reveal>
                 <Reveal duration={0.8}>
-                    <SchedulingTypeServiceCard icon={faDroplet} service="Pigmentação" duration={60} price={120} active={scheduling.service === 'Pigmentação'} />
+                    <SchedulingTypeServiceCard icon={faDroplet} service="Pigmentação" duration={60} price={120} active={scheduling.services.includes('Pigmentação')} />
                 </Reveal>
                 <Reveal duration={0.9}>
-                    <SchedulingTypeServiceCard icon={faStar} service="Combo Premium" duration={90} price={150} active={scheduling.service === 'Combo Premium'} />
+                    <SchedulingTypeServiceCard icon={faStar} service="Combo Premium" duration={90} price={150} active={scheduling.services.includes('Combo Premium')} />
                 </Reveal>
                 <Reveal duration={1}>
-                    <SchedulingTypeServiceCard icon={faDroplet} service="Hidratação" duration={30} price={45} active={scheduling.service === 'Hidratação'} />
+                    <SchedulingTypeServiceCard icon={faDroplet} service="Hidratação" duration={30} price={45} active={scheduling.services.includes('Hidratação')} />
                 </Reveal>
             </div>
 
-            <SchedulingButtons buttonBack={false} step={props.step} disableCondition={!scheduling.service}/>
+            <SchedulingButtons buttonBack={false} step={props.step} disableCondition={!scheduling.services.length}/>
         </div>
     )
 }

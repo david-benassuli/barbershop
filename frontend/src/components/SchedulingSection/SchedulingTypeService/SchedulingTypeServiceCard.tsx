@@ -20,7 +20,7 @@ export function SchedulingTypeServiceCard(props: SchedulingTypeServiceCardType) 
     return (
         <div className={`flex flex-row justify-between p-4 border font-dmsans hover:border-secondary hover:cursor-pointer transition-colors duration-200 ${props.active ? 'border-secondary bg-lowbg' : 'border-secondary/40'}`}
             onClick={() => {
-                setScheduling(prev => ({...prev, service: props.service, price: props.price, duration: props.duration}))
+                setScheduling(prev => prev.services.includes(props.service) ? ({...prev, services: prev.services.filter(service => service !== props.service), prices: prev.prices.filter(price => price !== props.price), durations: prev.durations.filter(duration => duration !== props.duration)}) : ({...prev, services: [...prev.services, props.service], prices: [...prev.prices, props.price], durations: [...prev.durations, props.duration]}))
             }}
         >
             <div className="flex flex-row gap-4 items-center">

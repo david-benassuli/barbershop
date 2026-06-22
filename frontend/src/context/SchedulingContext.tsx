@@ -4,9 +4,9 @@ import { createContext, ReactNode, useState } from "react";
 
 type SchedulingType = {
     step: number,
-    service: string,
-    price: number,
-    duration: number,
+    services: string[],
+    prices: number[],
+    durations: number[],
     barber: string,
     dayWeek: number,
     day: number,
@@ -26,9 +26,9 @@ export const SchedulingContext = createContext<SchedulingContextType | null>(nul
 
 const initialScheduling: SchedulingType = {
     step: 1,
-    service: '',
-    price: 0,
-    duration: 0,
+    services: [],
+    prices: [],
+    durations: [],
     barber: '',
     dayWeek: -1,
     day: 0,
