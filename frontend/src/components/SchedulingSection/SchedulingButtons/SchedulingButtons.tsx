@@ -1,7 +1,5 @@
 'use client'
 
-import 'dotenv/config'
-
 import { useScheduling } from "@/hook/UseScheduling"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -14,7 +12,7 @@ type SchedulingButtonsType = {
     lastStep?: boolean,
 }
 
-const API_URL = process.env.API_URL
+const API_URL = process.env.NEXT_PUBLIB_API_URL
 
 export function SchedulingButtons(props: SchedulingButtonsType) {
 
