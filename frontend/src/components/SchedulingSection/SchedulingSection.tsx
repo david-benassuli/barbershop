@@ -34,6 +34,10 @@ export function SchedulingSection() {
         })
     }, [scheduling.step])
 
+    useEffect(() => {
+        console.log(process.env.NEXT_PUBLIC_API_URL)
+    }, [])
+
     return (
         <section ref={sectionRef} id="scheduling-section" className="bg-highbg flex flex-col gap-10">
             {scheduling.step === 5 ? <SchedulingRestart/> : <>
