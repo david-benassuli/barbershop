@@ -8,7 +8,7 @@ import { Scheduling } from './models/Scheduling.js'
 const app = express()
 app.use(express.json())
 app.use(cors({
-  origin: ["https://barbershop-dun-beta.vercel.app", "https://barbershop-davidbenassuli-projects.vercel.app"]
+  origin: "*"
 }))
 
 const MONGO_URL = process.env.MONGO_URL
