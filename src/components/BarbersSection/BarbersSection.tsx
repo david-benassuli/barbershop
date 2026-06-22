@@ -25,13 +25,13 @@ export function BarbersSection() {
                             max-md:flex max-md:flex-col max-md:gap-8
             ">
                 <Reveal duration={0.5}>
-                    <BarberCard url_img="/barber1.png" name="Rafael Nobre" cut="Cortes Clássicos & Fade" exp={12} insta="rafaelnobre"/>
+                    <BarberCard url_img="/barber1.avif" name="Rafael Nobre" cut="Cortes Clássicos & Fade" exp={12} insta="rafaelnobre"/>
                 </Reveal>
                 <Reveal duration={0.75}>
-                    <BarberCard url_img="/barber2.png" name="Marcus Vinicius" cut="Barba & Pigmentação" exp={8} insta="marcusvinicius"/>
+                    <BarberCard url_img="/barber2.avif" name="Marcus Vinicius" cut="Barba & Pigmentação" exp={8} insta="marcusvinicius"/>
                 </Reveal>
                 <Reveal duration={1}>
-                    <BarberCard url_img="/barber3.png" name="Diego Santos" cut="Texturas & Degradês" exp={6} insta="diegosantos"/>
+                    <BarberCard url_img="/barber3.avif" name="Diego Santos" cut="Texturas & Degradês" exp={6} insta="diegosantos"/>
                 </Reveal>
             </div>
         </section>

@@ -14,7 +14,7 @@ export function BarberCard(props: BarberCardProps) {
         <div className="flex flex-col gap-5 max-md:gap-2">
             <div className="relative overflow-hidden group">
                 <div className="absolute h-full w-full group-hover:bg-linear-to-b from-transparent to-black/80 transition-all duration-300 z-1" ></div>
-                <img className="h-full group-hover:scale-110 transition-all duration-500" src={props.url_img} alt="Barber Image" />
+                <img className="h-full group-hover:scale-110 transition-all duration-500 grayscale" src={props.url_img} alt="Barber Image" />
                 <p className="absolute translate-x-2 translate-y-10 group-hover:-translate-y-12 text-secondary font-bodoni transition-all duration-300 z-2"> <FontAwesomeIcon icon={faInstagram} /> @{props.insta}</p>
             </div>
 

@@ -1,38 +1,53 @@
 'use client'
 
+import { Reveal } from "@/components/Reveal"
+
 import { SchedulingTypeServiceCard } from "./SchedulingTypeServiceCard"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faScissors } from "@fortawesome/free-solid-svg-icons"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { faPerson } from "@fortawesome/free-solid-svg-icons"
 import { faDroplet } from "@fortawesome/free-solid-svg-icons"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { SchedulingButtons } from "../SchedulingButtons/SchedulingButtons"
 
 import { useScheduling } from "@/hook/UseScheduling"
 
-export function SchedulingTypeService() {
+import type { SchedulingSectionType } from "../SchedulingSection"
+
+export function SchedulingTypeService(props: SchedulingSectionType) {
 
     const {scheduling} = useScheduling()
 
     return (
-        <div className="flex flex-col gap-10 md:justify-between">
-            <h3 className="text-main text-[clamp(1rem,5vw,3rem)] font-[--font-bodoni] leading-none">Escolha o serviço</h3>
+        <div className="flex flex-col gap-10">
+            <Reveal duration={0.5}>
+                <h3 className="text-main text-[clamp(1rem,5vw,3rem)] font-[--font-bodoni] leading-none">Escolha o serviço</h3>
+            </Reveal>
 
-            <div className="flex flex-col gap-4
+            <div className="flex flex-col gap-1
                 md:grid md:grid-cols-2
             ">
-                <SchedulingTypeServiceCard idService={1} icon={faScissors} type="Corte Clássico" time={45} price={65} active={scheduling.idService === 1} />
-                <SchedulingTypeServiceCard idService={2} icon={faStar} type="Barba Completa" time={35} price={55} active={scheduling.idService === 2} />
-                <SchedulingTypeServiceCard idService={3} icon={faPerson} type="Sombrancelha" time={20} price={25} active={scheduling.idService === 3} />
-                <SchedulingTypeServiceCard idService={4} icon={faDroplet} type="Pigmentação" time={60} price={120} active={scheduling.idService === 4} />
-                <SchedulingTypeServiceCard idService={5} icon={faStar} type="Combo Premium" time={90} price={150} active={scheduling.idService === 5} />
-                <SchedulingTypeServiceCard idService={6} icon={faDroplet} type="Hidratação" time={30} price={45} active={scheduling.idService === 6} />
+                <Reveal duration={0.5}>
+                    <SchedulingTypeServiceCard icon={faScissors} service="Corte Clássico" duration={45} price={65} active={scheduling.service === 'Corte Clássico'} />
+                </Reveal>
+                <Reveal duration={0.6}>
+                    <SchedulingTypeServiceCard icon={faStar} service="Barba Completa" duration={35} price={55} active={scheduling.service === 'Barba Completa'} />
+                </Reveal>
+                <Reveal duration={0.7}>
+                    <SchedulingTypeServiceCard icon={faPerson} service="Sombrancelha" duration={20} price={25} active={scheduling.service === 'Sombrancelha'} />
+                </Reveal>
+                <Reveal duration={0.8}>
+                    <SchedulingTypeServiceCard icon={faDroplet} service="Pigmentação" duration={60} price={120} active={scheduling.service === 'Pigmentação'} />
+                </Reveal>
+                <Reveal duration={0.9}>
+                    <SchedulingTypeServiceCard icon={faStar} service="Combo Premium" duration={90} price={150} active={scheduling.service === 'Combo Premium'} />
+                </Reveal>
+                <Reveal duration={1}>
+                    <SchedulingTypeServiceCard icon={faDroplet} service="Hidratação" duration={30} price={45} active={scheduling.service === 'Hidratação'} />
+                </Reveal>
             </div>
 
-            <button type="button" disabled={!scheduling.idService} className={`group self-start hover:cursor-pointer duration-200 px-8 py-4 flex flex-row gap-2 items-center disabled:cursor-not-allowed ${scheduling.idService ? 'bg-secondary/80 hover:bg-secondary text-lowbg' : 'bg-secondary/20 text-lowbg/20'}`} 
-                onClick={() => console.log('clicou')}
-            >PRÓXIMO <FontAwesomeIcon className={`duration-200 w-4 h-4 ${scheduling.idService ? 'group-hover:translate-x-2' : ''}`} icon={faArrowRight}/></button>
+            <SchedulingButtons buttonBack={false} step={props.step} disableCondition={!scheduling.service}/>
         </div>
     )
 }

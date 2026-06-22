@@ -1,0 +1,78 @@
+import { useState } from "react"
+import { SchedulingButtons } from "../SchedulingButtons/SchedulingButtons"
+
+import type { SchedulingSectionType } from "../SchedulingSection"
+
+import { useScheduling } from "@/hook/UseScheduling"
+
+export function SchedulingConfirmation(props: SchedulingSectionType) {
+
+    const {scheduling} = useScheduling()
+
+    const daysWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+
+    const [inputClient, setInputClient] = useState("")
+    const [inputPhone, setInputPhone] = useState("")
+
+    return (
+        <div className=" flex flex-col gap-5">
+            <h3 className="text-main text-[clamp(1rem,5vw,3rem)] font-[--font-bodoni] leading-none">Confirmar agendamento</h3>
+
+            <div className="bg-lowbg flex flex-col gap-5 p-4 border border-low/50 font-dmsans">
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">SERVIÇO</h4>
+                    <p className="text-main">{scheduling.service}</p>
+                </div>
+
+                <hr className="border-low/30" />
+
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">PREÇO</h4>
+                    <p className="text-main">R${scheduling.price},00</p>
+                </div>
+                
+                <hr className="border-low/30" />
+
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">DURAÇÃO</h4>
+                    <p className="text-main">{scheduling.duration} min</p>
+                </div>
+
+                <hr className="border-low/30" />
+
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">BARBEIRO</h4>
+                    <p className="text-main">{scheduling.barber}</p>
+                </div>
+
+                <hr className="border-low/30" />
+
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">DATA</h4>
+                    <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {months[scheduling.month]}</p>
+                </div>
+
+                <hr className="border-low/30" />
+
+                <div className="flex flex-row justify-between">
+                    <h4 className="text-low">HORÁRIO</h4>
+                    <p className="text-main">{scheduling.hour}</p>
+                </div>
+
+                <hr className="border-low/30" />
+            </div>
+
+            <form className="flex flex-col gap-2">
+                <input className="border border-low/50 bg-lowbg text-low p-5 focus:border-secondary focus:outline-none transition-colors duration-200" type="text" placeholder="Seu nome completo" required
+                    onChange={(e) => setInputClient(e.target.value)} value={inputClient}
+                />
+                <input className="border border-low/50 bg-lowbg text-low p-5 focus:border-secondary focus:outline-none transition-colors duration-200" type="text" placeholder="Seu WhatsApp com DDD"
+                    onChange={(e) => setInputPhone(e.target.value)} value={inputPhone}
+                />
+            </form>
+
+            <SchedulingButtons buttonBack step={props.step} disableCondition={inputPhone.length < 9 || inputClient.length < 10} lastStep/>
+        </div>
+    )
+}

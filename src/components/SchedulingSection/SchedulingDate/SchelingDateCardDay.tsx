@@ -1,0 +1,26 @@
+import { useScheduling } from "@/hook/UseScheduling"
+
+type SchedulingDateCardDayType = {
+    dayWeek: number,
+    day: number,
+    month: number,
+    active: boolean
+}
+
+export function SchedulingDateCardDay(props: SchedulingDateCardDayType) {
+
+    const {setScheduling} = useScheduling()
+
+    const daysWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+
+    return (
+        <div className={`flex flex-col w-15 gap-1 p-2 items-center border border-low/50 hover:cursor-pointer transition-colors duration-200 ${props.active ? 'border-secondary': 'hover:border-low'}`}
+            onClick={() => setScheduling(prev => ({...prev, day: props.day, dayWeek: props.dayWeek, month: props.month}))}
+        >
+            <p className="font-dmsans text-low">{daysWeek[props.dayWeek]}</p>
+            <p className={`font-bodoni text-2xl text-main transition-colors duration-200 ${props.active ? 'text-secondary' : 'text-low'}`}>{props.day}</p>
+            <p className="font-dmsans text-low">{months[props.month]}</p>
+        </div>
+    )
+}

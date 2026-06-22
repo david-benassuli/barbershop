@@ -14,7 +14,7 @@ export function FeedbacksSection() {
                 <Subtitle value="O que dizem nossos clientes" />
             </Reveal>
 
-            <div className="grid grid-cols-3 
+            <div className="grid grid-cols-3 gap-1
                             max-lg:grid-cols-2 max-md:grid-cols-1">
                 <Reveal duration={0.5}>
                     <FeedBackCard stars={5} feedback="“A melhor experiência de barbearia que já tive. O nível de atenção aos detalhes é incomparável. Saí com um visual completamente transformado.”" name="Carlos Menezes" profession="Empresário" />

@@ -27,7 +27,7 @@ export function ServicesSection() {
                 </div>
             </Reveal>
 
-            <div className="grid grid-cols-3
+            <div className="grid grid-cols-3 gap-1
                             max-lg:grid-cols-2
                             max-sm:grid-cols-1
             ">
