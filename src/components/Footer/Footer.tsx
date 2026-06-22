@@ -47,12 +47,8 @@ export function Footer() {
                     <div className="flex flex-col gap-5">
                         <Title value="HORÁRIO" />
                         <div>
-                            <Description value="Segunda - Sexta" />
-                            <p className="text-main text-xl font-dmsans">09:00 - 19:00</p>
-                        </div>
-                        <div>
-                            <Description value="Sábado" />
-                            <p className="text-main text-xl font-dmsans">09:00 - 17:00</p>
+                            <Description value="Segunda - Sábado" />
+                            <p className="text-main text-xl font-dmsans">09:00 - 18:00</p>
                         </div>
                         <Description value="Domingo - Fechado" />
                     </div>
