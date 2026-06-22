@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { SchedulingButtons } from "../SchedulingButtons/SchedulingButtons"
 
 import type { SchedulingSectionType } from "../SchedulingSection"
@@ -7,13 +6,9 @@ import { useScheduling } from "@/hook/UseScheduling"
 
 export function SchedulingConfirmation(props: SchedulingSectionType) {
 
-    const {scheduling} = useScheduling()
+    const {scheduling, setScheduling} = useScheduling()
 
     const daysWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
-    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-
-    const [inputClient, setInputClient] = useState("")
-    const [inputPhone, setInputPhone] = useState("")
 
     return (
         <div className=" flex flex-col gap-5">
@@ -52,7 +47,7 @@ export function SchedulingConfirmation(props: SchedulingSectionType) {
 
                 <div className="flex flex-row justify-between flex-wrap">
                     <h4 className="text-low">DATA</h4>
-                    <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {months[scheduling.month]}</p>
+                    <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {scheduling.month}</p>
                 </div>
 
                 <hr className="border-low/30" />
@@ -67,14 +62,18 @@ export function SchedulingConfirmation(props: SchedulingSectionType) {
 
             <form className="flex flex-col gap-2">
                 <input className="border border-low/50 bg-lowbg text-low p-5 focus:border-secondary focus:outline-none transition-colors duration-200" type="text" placeholder="Seu nome completo" required
-                    onChange={(e) => setInputClient(e.target.value)} value={inputClient}
+                    onChange={(e) => {
+                        setScheduling(prev => ({...prev, client: e.target.value}))
+                    }}
                 />
                 <input className="border border-low/50 bg-lowbg text-low p-5 focus:border-secondary focus:outline-none transition-colors duration-200" type="text" placeholder="Seu WhatsApp com DDD"
-                    onChange={(e) => setInputPhone(e.target.value)} value={inputPhone}
+                    onChange={(e) => {
+                        setScheduling(prev => ({...prev, phone: e.target.value}))
+                    }}
                 />
             </form>
 
-            <SchedulingButtons buttonBack step={props.step} disableCondition={inputPhone.length < 9 || inputClient.length < 10} lastStep/>
+            <SchedulingButtons buttonBack step={props.step} disableCondition={scheduling.phone.length < 9 || scheduling.client.length < 10} lastStep/>
         </div>
     )
 }

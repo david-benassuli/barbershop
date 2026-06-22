@@ -9,11 +9,12 @@ type SchedulingType = {
     durations: number[],
     barber: string,
     dayWeek: number,
-    day: number,
-    month: number,
+    day: string,
+    month: string,
     hour: string,
     client: string,
-    phone: string
+    phone: string,
+    busyHours: string[]
 }
 
 type SchedulingContextType = {
@@ -31,11 +32,12 @@ const initialScheduling: SchedulingType = {
     durations: [],
     barber: '',
     dayWeek: -1,
-    day: 0,
-    month: 0,
+    day: '',
+    month: '',
     hour: "",
     client: '',
-    phone: ''
+    phone: '',
+    busyHours: []
 }
 
 export function SchedulingProvider({children}: {children: ReactNode}) {
