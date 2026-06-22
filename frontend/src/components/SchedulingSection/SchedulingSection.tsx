@@ -24,7 +24,6 @@ export function SchedulingSection() {
     const {scheduling} = useScheduling()
 
     const daysWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
-    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 
     const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -63,7 +62,7 @@ export function SchedulingSection() {
                                 </div>}
                                 {(scheduling.hour && scheduling.day) && <div className="flex flex-col">
                                     <h5 className="text-low text-sm">Data & Hora</h5>
-                                    <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {months[scheduling.month]} às {scheduling.hour}</p>
+                                    <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {scheduling.month} às {scheduling.hour}</p>
                                 </div>}
                             </div>
                         </Reveal>

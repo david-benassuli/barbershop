@@ -12,7 +12,8 @@ type SchedulingButtonsType = {
     lastStep?: boolean,
 }
 
-const API_URL = process.env.NEXT_PUBLIB_API_URL
+const API_URL = process.env.NEXT_PUBLIC_API_URL
+console.log("API_URL:", process.env.NEXT_PUBLIC_API_URL)
 
 export function SchedulingButtons(props: SchedulingButtonsType) {
 
