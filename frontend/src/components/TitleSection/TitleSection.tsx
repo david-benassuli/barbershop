@@ -28,8 +28,8 @@ export function TitleSection() {
                         <div className="flex flex-row flex-wrap gap-5 text-sm
                                         max-sm:justify-center font-dmsans
                         ">
-                            <Link className="group bg-secondary/80 hover:bg-secondary hover:cursor-pointer duration-200 px-8 py-4 flex flex-row gap-2 items-center text-lowbg" href="#contact-footer">CONTATOS <FontAwesomeIcon className="group-hover:translate-x-2 duration-200 w-4 h-4" icon={faArrowRight} /></Link>
-                            <Link className="bg-transparent text-main font-bold border border-secondary/30 hover:border-secondary hover:cursor-pointer duration-200 px-8 py-4" href="#services-section">NOSSOS SERVIÇOS</Link>
+                            <Link className="group bg-secondary/80 hover:bg-secondary hover:cursor-pointer duration-200 px-8 py-4 flex flex-row gap-2 items-center text-lowbg" href="#scheduling-section">AGENDAMENTO <FontAwesomeIcon className="group-hover:translate-x-2 duration-200 w-4 h-4" icon={faArrowRight} /></Link>
+                            <Link className="bg-transparent text-main font-bold border border-secondary/30 hover:border-secondary hover:cursor-pointer duration-200 px-8 py-4" href="#contact-footer">CONTATO</Link>
                         </div>
                     </Reveal>
                 </div>

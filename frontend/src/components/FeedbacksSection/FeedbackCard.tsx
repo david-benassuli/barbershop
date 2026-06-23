@@ -12,7 +12,7 @@ export function FeedBackCard(props: FeedBackCardProps) {
     return (
         <div className="flex flex-col  border border-secondary/20 justify-between p-8 h-75">
             <p>{"⭐".repeat(props.stars)}</p>
-            <p className="text-low font-dmsans">{props.feedback}</p>
+            <p className="text-low font-dmsans text-[clamp(0.8rem,4vw,1rem)]">{props.feedback}</p>
             <hr className="border-secondary/20" />
             <div className="flex flex-row gap-2 items-center">
                 <FontAwesomeIcon className="text-low border border-secondary/20 p-2" icon={faUser} />

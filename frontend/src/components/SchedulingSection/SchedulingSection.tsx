@@ -27,16 +27,19 @@ export function SchedulingSection() {
 
     const sectionRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        sectionRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        })
-    }, [scheduling.step])
+    const isFirstRender = useRef(true)
 
     useEffect(() => {
-        console.log(process.env.NEXT_PUBLIC_API_URL)
-    }, [])
+        if (isFirstRender.current) {
+            isFirstRender.current = false
+            return
+        }
+
+        sectionRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+        })
+    }, [scheduling.step])
 
     return (
         <section ref={sectionRef} id="scheduling-section" className="bg-highbg flex flex-col gap-10">
@@ -56,7 +59,7 @@ export function SchedulingSection() {
                         <Reveal duration={0.5}>
                             <div className="bg-lowbg flex flex-col gap-2 p-4 border border-low/50">
                                 <h4 className="text-secondary">RESUMO</h4>
-                                {scheduling.services.length && <div className="flex flex-col">
+                                {scheduling.services.length > 0 && <div className="flex flex-col">
                                     <h5 className="text-low text-sm">{scheduling.services.length <= 1 ?'Serviço' : 'Serviços'}</h5>
                                     {scheduling.services.map((item, index) => <p className="text-main" key={`${item}-${index}`}>{item} - R${scheduling.prices[index]},00</p>)}
                                 </div>}
@@ -64,7 +67,7 @@ export function SchedulingSection() {
                                     <h5 className="text-low text-sm">Barbeiro</h5>
                                     <p className="text-main">{scheduling.barber}</p>
                                 </div>}
-                                {(scheduling.hour && scheduling.day) && <div className="flex flex-col">
+                                {scheduling.day && scheduling.hour && <div className="flex flex-col">
                                     <h5 className="text-low text-sm">Data & Hora</h5>
                                     <p className="text-main">{daysWeek[scheduling.dayWeek]}. {scheduling.day} de {scheduling.month} às {scheduling.hour}</p>
                                 </div>}
