@@ -72,7 +72,7 @@ export function SchedulingDate(props: SchedulingSectionType) {
             <div className="flex flex-col gap-5">
                 <h4 className="text-low">SELECIONE O HORÁRIO</h4>
                 <div className="grid grid-cols-5 gap-2">
-                    {hours.map(item => <SchedulingDateCardHour key={item} hour={item} active={item === scheduling.hour} disableCondition={scheduling.busyHours.includes(item)} />)}
+                    {hours.map(item => <SchedulingDateCardHour key={item} hour={item} active={item === scheduling.hour} blockedCondition={scheduling.busyHours.includes(item)} disabledCondition={!scheduling.day}  />)}
                 </div>
             </div>
 
